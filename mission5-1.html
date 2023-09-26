@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>mission5-1</title>
+</head>
+<body>
+<h2>電卓</h2>
+<input /> 
+<script>
+    function update( _v ) 
+    {
+        document.querySelector( 'input' ).value = _v
+    }
+function calc() 
+    {
+        const v = document.querySelector( 'input' ).value
+        const f = new Function( 'return ' + v )
+        update( f().toString() )
+    }
+</script>
+<button onclick="document.querySelector('input').value=''" >C</button><br>
+<button onclick="document.querySelector('input').value+='1'">1</button>
+<button onclick="document.querySelector('input').value+='2'">2</button>
+<button onclick="document.querySelector('input').value+='3'">3</button>
+<button onclick="document.querySelector('input').value+='+'">+</button><br>
+<button onclick="document.querySelector('input').value+='4'">4</button>
+<button onclick="document.querySelector('input').value+='5'">5</button>
+<button onclick="document.querySelector('input').value+='6'">6</button>
+<button onclick="document.querySelector('input').value+='-'">-</button><br>
+<button onclick="document.querySelector('input').value+='7'">7</button>
+<button onclick="document.querySelector('input').value+='8'">8</button>
+<button onclick="document.querySelector('input').value+='9'">9</button>
+<button onclick="document.querySelector('input').value+='*'">*</button><br>
+<button onclilck="document.querySelector('input').value+='0'">0</button>
+<button onclick="document.querySelector('input').value+='/'">/</button>
+<button onclick="calc()">=</button>
+</body>
+</html>
